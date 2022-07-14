@@ -1,21 +1,45 @@
-# 重构初始项目
+## 在 WORKSPACE 目录下运行
 
-这是一个基于Maven的项目, 主要用于练习Java重构。
+### 构建 maps 的命令
 
-## 已存在代码说明
+`bazel build //src/main/java/huoxingche/maps:maps`
 
-已经存在的代码主要实现了火星小车需求在
-![这里](https://github.com/codingkata/kata-puzzle/blob/master/02.marsrover.md)
+### 编译 Position_test 的命令
 
-## 克隆和运行
+`bazel build :position_test`
 
-* 克隆本项目
-* 为本项目添加测试，并进行小步重构。
-* 在src/test/java 目录下，增加Junit5（或Junit4）测试用例。
-* 在命令行下执行 `mvn test`，或者导入到 IDE，就可运行测试。
 
-# 重构要求
+### 执行测试用例的命令
 
-* 以《重构（第二版）》一书所描述的“小步重构”方法
-* 将该需求重构为良好的面向对象程序（详细要求参见“对象健身操”）。
-* 在重构过程中，确保代码随时可运行。
+`bazel build :alltests`
+
+### 编译 Rover 的命令
+
+`bazel build :rover`
+
+说明：
+
+target `:Rover` 依赖于 targe `//src/main/java/huoxingche/maps:maps`
+
+### 编译 Main 的命令
+
+`bazel build :main`
+
+
+## Target maps
+
+所有 Target 的依赖图参见 `all-tree.png`.
+
+### 生成 alltests 依赖关系图的命令
+
+`bazel query  --notool_deps --noimplicit_deps "deps(//:all)" --output graph`
+
+### 生成 main 依赖关系图的命令
+
+`bazel query  --notool_deps --noimplicit_deps "deps(//:main)" --output graph`
+
+
+### 生成 alltests 依赖关系图的命令
+
+`bazel query  --notool_deps --noimplicit_deps "deps(//:alltests)" --output graph`
+

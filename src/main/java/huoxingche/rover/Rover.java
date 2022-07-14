@@ -1,4 +1,4 @@
-package huoxingche;
+package huoxingche.rover;
 
 import huoxingche.maps.Direction;
 import huoxingche.maps.Position;
