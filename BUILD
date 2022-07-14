@@ -1,14 +1,9 @@
 java_library(
-    name = "maps",
-    srcs = glob(["src/main/java/huoxingche/maps/*.java"]),
-)
-
-java_library(
     name = "position_test",
     srcs = ["src/test/java/huoxingche/maps/PositionTest.java"],
     deps =[
-        ":java_test_deps",
-        ":maps"
+        ":java_test_lib_deps",
+        "//src/main/java/huoxingche/maps:maps"
     ],
 )
 
@@ -21,7 +16,7 @@ java_test(
 )
 
 java_library(
-    name = "java_test_deps",
+    name = "java_test_lib_deps",
     exports = [
         "@maven//:junit_junit",
         "@maven//:org_hamcrest_hamcrest_library",
@@ -32,7 +27,7 @@ java_library(
     name = "rover",
     srcs = glob(["src/main/java/huoxingche/rover/*.java"]),
     deps = [
-        ":maps",
+        "//src/main/java/huoxingche/maps:maps",
     ]
 )
 
@@ -40,7 +35,7 @@ java_library(
     name = "main",
     srcs = glob(["src/main/java/huoxingche/*.java"]),
     deps = [
-        ":maps",
+        "//src/main/java/huoxingche/maps:maps",
         ":rover",
     ]
 )
