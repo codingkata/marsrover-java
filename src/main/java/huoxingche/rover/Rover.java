@@ -1,11 +1,15 @@
 package huoxingche;
-public class Detector {
+
+import huoxingche.maps.Direction;
+import huoxingche.maps.Position;
+
+public class Rover {
 	private Position pos;
 	private char faceTo;
 	private String moveCmd;
 	private Position MaxPosition;
 
-	public Detector(char faceTo, Position pos, String cmd , Position MaxPosition) {
+	public Rover(char faceTo, Position pos, String cmd , Position MaxPosition) {
 		this.pos = pos;
 		this.faceTo = faceTo;
 		this.moveCmd = cmd;

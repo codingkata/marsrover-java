@@ -1,4 +1,5 @@
-package huoxingche;
+package huoxingche.maps;
+
 
 public class Position {
 

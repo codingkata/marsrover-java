@@ -1,4 +1,5 @@
-package huoxingche;
+package huoxingche.maps;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,7 @@
-package huoxingche;
+package huoxingche.maps;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
 public class PositionTest {
     @Test
     public void should_true(){

@@ -1,11 +1,11 @@
 java_library(
     name = "Main",
-    srcs = glob(["src/main/java/huoxingche/*.java"]),
+    srcs = glob(["src/main/java/huoxingche/**/*.java"]),
 )
 
 java_library(
     name = "position_test",
-    srcs = ["src/test/java/huoxingche/PositionTest.java"],
+    srcs = ["src/test/java/huoxingche/maps/PositionTest.java"],
     deps =[
         ":java_test_deps",
         ":Main"
@@ -14,7 +14,7 @@ java_library(
 
 java_test(
     name = "alltests",
-    test_class ="huoxingche.PositionTest",
+    test_class ="huoxingche.maps.PositionTest",
     runtime_deps = [
         ":position_test",
     ],

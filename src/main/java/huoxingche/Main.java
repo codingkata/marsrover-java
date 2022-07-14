@@ -2,6 +2,9 @@ package huoxingche;
 
 import java.util.*;
 
+import huoxingche.maps.Direction;
+import huoxingche.maps.Position;
+
 public class Main {
 	public static void main(String[] args) {
 		List<String> cmd = new ArrayList<String>();
@@ -20,12 +23,12 @@ public class Main {
 			return "error cmd...";
 		}
 		Direction direction = Direction.getInstance();
-		List<Detector> directionList = new ArrayList<Detector>();
+		List<Rover> directionList = new ArrayList<Rover>();
 		String[] maxXY = cmd.get(0).split(" ");
 		Position maxPos = new Position(maxXY[0].trim(), maxXY[1].trim());
 		for (int i = 1; i < cmd.size(); i += 2) {
 			String[] tmp = cmd.get(i).split(" ");
-			Detector detector = new Detector(tmp[2].toUpperCase().charAt(0),new Position(tmp[0], tmp[1]), cmd.get(i + 1),new Position(String.valueOf(maxPos.getX()), String.valueOf(maxPos.getY())));
+			Rover detector = new Rover(tmp[2].toUpperCase().charAt(0),new Position(tmp[0], tmp[1]), cmd.get(i + 1),new Position(String.valueOf(maxPos.getX()), String.valueOf(maxPos.getY())));
 			detector.excuteCMD(direction);
 			detector.getPos().setX(detector.getPos().getX() <= maxPos.getX() ? detector.getPos().getX() : maxPos.getX());
 			detector.getPos().setY(detector.getPos().getY() <= maxPos.getY() ? detector.getPos().getY() : maxPos.getY());
