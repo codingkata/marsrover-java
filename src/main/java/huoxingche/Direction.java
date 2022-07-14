@@ -1,7 +1,5 @@
 package huoxingche;
 
-//方向控制器，控制转向和移动。  
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

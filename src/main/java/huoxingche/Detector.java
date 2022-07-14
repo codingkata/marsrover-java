@@ -1,5 +1,4 @@
 package huoxingche;
-
 public class Detector {
 	private Position pos;
 	private char faceTo;
