@@ -12,6 +12,6 @@ java_library(
     ################################################
     srcs = glob(["*.java"]),
     deps =[
-        "//src/main/java/huoxingche/maps:maps"
+        "//src/main/java/bzlexample/maps:maps"
     ],
 )

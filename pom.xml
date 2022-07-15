@@ -67,7 +67,7 @@
                     <manifest>
                       <addClasspath>true</addClasspath>
                       <classpathPrefix>lib/</classpathPrefix>
-                      <mainClass>huoxingche.Main</mainClass>
+                      <mainClass>bzlexample.Main</mainClass>
                     </manifest>
                   </archive>
                 </configuration>

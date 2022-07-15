@@ -2,7 +2,7 @@
 
 ### 构建 maps 的命令
 
-`bazel build //src/main/java/huoxingche/maps:maps`
+`bazel build //src/main/java/bzlexample/maps:maps`
 
 ### 编译 Position_test 的命令
 
@@ -19,7 +19,7 @@
 
 说明：
 
-target `:Rover` 依赖于 targe `//src/main/java/huoxingche/maps:maps`
+target `:Rover` 依赖于 targe `//src/main/java/bzlexample/maps:maps`
 
 ### 编译 Main 的命令
 

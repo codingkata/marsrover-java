@@ -1,4 +1,4 @@
-package huoxingche.maps;
+package bzlexample.maps;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

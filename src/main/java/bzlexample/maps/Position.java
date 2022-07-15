@@ -1,4 +1,4 @@
-package huoxingche.maps;
+package bzlexample.maps;
 
 
 public class Position {

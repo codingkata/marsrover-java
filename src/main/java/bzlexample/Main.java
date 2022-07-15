@@ -1,10 +1,10 @@
-package huoxingche;
+package bzlexample;
 
 import java.util.*;
 
-import huoxingche.maps.Direction;
-import huoxingche.maps.Position;
-import huoxingche.rover.Rover;
+import bzlexample.maps.Direction;
+import bzlexample.maps.Position;
+import bzlexample.rover.Rover;
 
 public class Main {
 	public static void main(String[] args) {

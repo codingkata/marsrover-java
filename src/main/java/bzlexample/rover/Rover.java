@@ -1,7 +1,7 @@
-package huoxingche.rover;
+package bzlexample.rover;
 
-import huoxingche.maps.Direction;
-import huoxingche.maps.Position;
+import bzlexample.maps.Direction;
+import bzlexample.maps.Position;
 
 public class Rover {
 	private Position pos;
