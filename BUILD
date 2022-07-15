@@ -25,3 +25,12 @@ java_library(
         "//src/main/java/huoxingche/rover:rover",
     ]
 )
+
+java_binary(
+    name = "myapp",
+    main_class = "huoxingche.Main",
+    visibility = ["//visibility:public"],
+    runtime_deps = [":main"],
+    # 下面的属性与 main_class 任选其一，以标明程序入口。
+    # deploy_manifest_lines = ["Main-Class: huoxingche.Main"]
+)
